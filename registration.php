@@ -2,6 +2,6 @@
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'RicherIndex_Testimonials',
+    'RicherIndex_Testimonial',
     __DIR__
 );
