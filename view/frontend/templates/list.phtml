@@ -1,0 +1,29 @@
+<?php
+/**
+ * Copyright © Shekhar Suman, 2024. All rights reserved.
+ * See COPYING.txt for license details.
+ * 
+ * @package     RicherIndex_Testimonial
+ * @version     1.0.0
+ * @license     MIT License (http://opensource.org/licenses/MIT)
+ * @autor       Shekhar Suman
+ */
+?>
+
+<h1><?php echo __('Testimonials') ?></h1>
+<div class="row testimonials-post-list">
+<?php /** @var $testimonial \RicherIndex\Testimonial\Model\Testimonial */ ?>
+<?php foreach ($block->getTestimonials() as $testimonial): ?>
+    <div class="container testimonial-list-item well">
+        <h4 class="testimonial-item-content">
+            <?php echo $testimonial->getPost(); ?>
+        </h4>
+        <div class="testimonial-item-meta">
+            <strong><?php echo __('Posted By:') ?></strong> <?php echo $testimonial->getName() ?>
+        </div>
+    </div>
+<?php endforeach; ?>
+<?php if ($block->getPagerHtml()): ?>
+        <div class="testimonials-toolbar toolbar bottom"><?php echo $block->getPagerHtml(); ?></div>
+    <?php endif ?>
+</div>
