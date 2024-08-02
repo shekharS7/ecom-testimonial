@@ -1,0 +1,170 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © Shekhar Suman, 2024. All rights reserved.
+ * See COPYING.txt for license details.
+ * 
+ * @package     RicherIndex_Testimonial
+ * @version     1.0.0
+ * @license     MIT License (http://opensource.org/licenses/MIT)
+ * @autor       Shekhar Suman
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+	<argument name="data" xsi:type="array">
+		<item name="js_config" xsi:type="array">
+			<item name="provider" xsi:type="string">testimonial_form.testimonial_form_data_source</item>
+			<item name="deps" xsi:type="string">testimonial_form.testimonial_form_data_source</item>
+		</item>
+		<item name="label" translate="true" xsi:type="string">General Information</item>
+		<item name="config" xsi:type="array">
+			<item name="dataScope" xsi:type="string">data</item>
+			<item name="namespace" xsi:type="string">testimonial_form</item>
+		</item>
+		<item name="template" xsi:type="string">templates/form/collapsible</item>
+		<item name="buttons" xsi:type="array">
+			<item name="back" xsi:type="string">RicherIndex\Testimonial\Block\Adminhtml\Testimonial\Edit\BackButton</item>
+			<item name="delete" xsi:type="string">RicherIndex\Testimonial\Block\Adminhtml\Testimonial\Edit\DeleteButton</item>
+			<item name="save" xsi:type="string">RicherIndex\Testimonial\Block\Adminhtml\Testimonial\Edit\SaveButton</item>
+			<item name="save_and_continue" xsi:type="string">RicherIndex\Testimonial\Block\Adminhtml\Testimonial\Edit\SaveAndContinueButton</item>
+		</item>
+	</argument>
+	<dataSource name="testimonial_form_data_source">
+		<argument name="dataProvider" xsi:type="configurableObject">
+			<argument name="class" xsi:type="string">RicherIndex\Testimonial\Model\Testimonial\DataProvider</argument>
+			<argument name="name" xsi:type="string">testimonial_form_data_source</argument>
+			<argument name="primaryFieldName" xsi:type="string">testimonial_id</argument>
+			<argument name="requestFieldName" xsi:type="string">testimonial_id</argument>
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="submit_url" path="*/*/save" xsi:type="url"/>
+				</item>
+			</argument>
+		</argument>
+		<argument name="data" xsi:type="array">
+			<item name="js_config" xsi:type="array">
+				<item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+			</item>
+		</argument>
+	</dataSource>
+	<fieldset name="General">
+		<argument name="data" xsi:type="array">
+			<item name="config" xsi:type="array">
+				<item name="label" xsi:type="string"/>
+			</item>
+		</argument>
+		<field name="company_name">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Company</item>
+					<item name="formElement" xsi:type="string">input</item>
+					<item name="source" xsi:type="string">Testimonial</item>
+					<item name="sortOrder" xsi:type="number">10</item>
+					<item name="dataScope" xsi:type="string">company_name</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">true</item>
+					</item>
+				</item>
+			</argument>
+		</field>
+		<field name="name">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Name</item>
+					<item name="formElement" xsi:type="string">input</item>
+					<item name="source" xsi:type="string">Testimonial</item>
+					<item name="sortOrder" xsi:type="number">20</item>
+					<item name="dataScope" xsi:type="string">name</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">true</item>
+					</item>
+				</item>
+			</argument>
+		</field>
+		<field name="message">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Message</item>
+					<item name="formElement" xsi:type="string">input</item>
+					<item name="source" xsi:type="string">Testimonial</item>
+					<item name="sortOrder" xsi:type="number">30</item>
+					<item name="dataScope" xsi:type="string">message</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">true</item>
+					</item>
+				</item>
+			</argument>
+		</field>
+		<field name="post">
+			<argument name="data" xsi:type="array">
+				<item name="config" xsi:type="array">
+					<item name="dataType" xsi:type="string">text</item>
+					<item name="label" translate="true" xsi:type="string">Post</item>
+					<item name="formElement" xsi:type="string">input</item>
+					<item name="source" xsi:type="string">Testimonial</item>
+					<item name="sortOrder" xsi:type="number">40</item>
+					<item name="dataScope" xsi:type="string">post</item>
+					<item name="validation" xsi:type="array">
+						<item name="required-entry" xsi:type="boolean">true</item>
+					</item>
+				</item>
+			</argument>
+		</field>
+		<field name="profile_pic">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">string</item>
+                    <item name="source" xsi:type="string">Testimonial</item>
+                    <item name="label" xsi:type="string" translate="true">Profile Pic</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="formElement" xsi:type="string">fileUploader</item>
+                    <item name="elementTmpl" xsi:type="string">ui/form/element/uploader/uploader</item>
+                    <item name="previewTmpl" xsi:type="string">RicherIndex_Testimonials/image-preview</item>
+                    <item name="required" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="number">50</item>
+                    <item name="uploaderConfig" xsi:type="array">
+                        <item name="url" xsi:type="url" path="testimonials/testimonial/upload"/>
+                    </item>
+                </item>
+            </argument>
+        </field>
+	
+		<field name="status">
+		    <argument name="data" xsi:type="array">
+		        <item name="options" xsi:type="object">RicherIndex\Testimonial\Model\Config\Source\Status</item>
+		        <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">60</item>
+		            <item name="dataType" xsi:type="string">text</item>
+		            <item name="label" xsi:type="string" translate="true">Status</item>
+		            <item name="formElement" xsi:type="string">select</item>
+		            <item name="source" xsi:type="string">popup</item>
+		            <item name="dataScope" xsi:type="string">status</item>
+		            <item name="default" xsi:type="string">0</item>
+		            <item name="validation" xsi:type="array">
+		                <item name="required-entry" xsi:type="boolean">true</item>
+		            </item>
+		        </item>
+		    </argument>
+		</field>
+		<!-- <field name="storeview">
+		    <argument name="data" xsi:type="array">
+		        <item name="options" xsi:type="object">Magento\Store\Model\ResourceModel\Store\Collection</item>
+		        <item name="config" xsi:type="array">
+                    <item name="sortOrder" xsi:type="number">50</item>
+		            <item name="dataType" xsi:type="string">text</item>
+		            <item name="label" xsi:type="string" translate="true">Store View</item>
+		            <item name="formElement" xsi:type="string">multiselect</item>
+		            <item name="source" xsi:type="string">popup</item>
+		            <item name="dataScope" xsi:type="string">storeview</item>
+		            <item name="default" xsi:type="string">0,1,2,3,4</item>
+		            <item name="validation" xsi:type="array">
+		                <item name="required-entry" xsi:type="boolean">true</item>
+		            </item>
+		        </item>
+		    </argument>
+		</field> -->
+	</fieldset>
+</form>
