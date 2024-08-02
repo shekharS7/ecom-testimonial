@@ -7,7 +7,7 @@
  * @version     1.0.0
  * @license     MIT License (http://opensource.org/licenses/MIT)
  * @autor       Shekhar Suman
-
+ */
 namespace RicherIndex\Testimonial\Setup;
 
 use Magento\Framework\Setup\ModuleContextInterface;
