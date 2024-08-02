@@ -60,7 +60,7 @@ class Edit extends \Magento\Backend\App\Action
         // load layout, set active menu and breadcrumbs
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('RicherIndex_Testimonials::kiwicommerce')
+        $resultPage->setActiveMenu('RicherIndex_Testimonials::richerindex')
             ->addBreadcrumb(__('Testimonial'), __('Testimonial'))
             ->addBreadcrumb(__('Manage Testimonials'), __('Manage Testimonials'));
         return $resultPage;
