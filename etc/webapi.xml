@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Shekhar Suman, 2024. All rights reserved.
+ * See COPYING.txt for license details.
+ * 
+ * @package     RicherIndex_Testimonial
+ * @version     1.0.0
+ * @license     MIT License (http://opensource.org/licenses/MIT)
+ * @autor       Shekhar Suman
+ */
+ -->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../app/code/Magento/Webapi/etc/webapi.xsd">
+    <route url="/V1/richerindex/testimonial" method="POST">
+        <service class="RicherIndex\Testimonial\Api\TestimonialRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="RicherIndex_Testimonial::testimonial_save"/>
+        </resources>
+    </route>
+    <route url="/V1/richerindex/testimonial" method="PUT">
+        <service class="RicherIndex\Testimonial\Api\TestimonialRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="RicherIndex_Testimonial::testimonial_save"/>
+        </resources>
+    </route>
+
+    <route url="/V1/richerindex/testimonial/:testimonialId" method="DELETE">
+        <service class="RicherIndex\Testimonial\Api\TestimonialRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="RicherIndex_Testimonial::testimonial_delete"/>
+        </resources>
+    </route>
+
+    <route url="/V1/richerindex/testimonials" method="GET">
+        <service class="RicherIndex\Testimonial\Api\TestimonialRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="RicherIndex_Testimonial::richerindex"/>
+        </resources>
+    </route>
+
+</routes>

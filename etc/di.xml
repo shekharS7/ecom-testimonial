@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Shekhar Suman, 2024. All rights reserved.
+ * See COPYING.txt for license details.
+ * 
+ * @package     RicherIndex_Testimonial
+ * @version     1.0.0
+ * @license     MIT License (http://opensource.org/licenses/MIT)
+ * @autor       Shekhar Suman
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    
+    <preference for="RicherIndex\Testimonial\Api\TestimonialRepositoryInterface" type="RicherIndex\Testimonial\Model\Api\TestimonialRepository" />
+
+    <preference for="RicherIndex\Testimonial\Api\Data\TestimonialInterface" type="RicherIndex\Testimonial\Model\Testimonial"/>
+    <preference for="RicherIndex\Testimonial\Api\Data\TestimonialSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+
+	  <virtualType name="TestimonialGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="TestimonialGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">RicherIndex\Testimonial\Model\ResourceModel\Testimonial\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">TetimonialGirdFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="RicherIndex\Testimonial\Model\ResourceModel\Testimonial\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">richerindex_testimonial</argument>
+            <argument name="resourceModel" xsi:type="string">RicherIndex\Testimonial\Model\ResourceModel\Testimonial</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="testimonial_listing_data_source" xsi:type="string">RicherIndex\Testimonial\Model\ResourceModel\Testimonial\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+	   <type name="Magento\Framework\Console\CommandList">
+       <arguments>
+           <argument name="commands" xsi:type="array">
+               <item name="testimonialExportCsv" xsi:type="object">RicherIndex\Testimonial\Console\Command\ExportCsv</item>
+           </argument>
+       </arguments>
+   </type>
+	
+</config>

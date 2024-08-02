@@ -1,0 +1,19 @@
+type Query {
+    testimonial (
+         pageSize: Int,
+         currentPage: Int
+    ): [TestimonialItems] @resolver(class: "RicherIndex\\Testimonial\\Model\\Resolver\\Testimonial") @doc(description: "Return testimonial")
+}
+
+
+type TestimonialItems {
+    testimonial_id: Int,
+    company_name: String,
+    name: String,
+    message: String,
+    post: String,
+    profile_pic: String,
+    status: Int,
+    created_at: String,
+    updated_at: String
+}
