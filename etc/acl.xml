@@ -14,7 +14,7 @@
 	<acl>
 		<resources>
 			<resource id="Magento_Backend::admin">
-				<resource id="Magento_Backend::testimonial_elements" title="KiwiCommerce Testimonials">
+				<resource id="Magento_Backend::testimonial_elements" title="RicherIndex Testimonials">
 					<resource id="Richerindex_Testimonial::testimonial" title="Testimonial" sortOrder="10">
 						<resource id="Richerindex_Testimonial::testimonial_edit" title="Edit Testimonial" sortOrder="10" />
 						<resource id="Richerindex_Testimonial::testimonial_save" title="Save Testimonial" sortOrder="20" />
@@ -24,7 +24,7 @@
 			<resource id="Magento_Backend::stores">
 				<resource id="Magento_Backend::stores_settings">
 					<resource id="Magento_Config::config">
-						<resource id="Richerindex_Testimonial::config_testimonial" title="KiwiCommerce Testimonials" />
+						<resource id="Richerindex_Testimonial::config_testimonial" title="RicherIndex Testimonials" />
 					</resource>
 					</resource>
 				</resource>
