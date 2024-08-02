@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Shekhar Suman, 2024. All rights reserved.
+ * See COPYING.txt for license details.
+ * 
+ * @package     RicherIndex_Testimonial
+ * @version     1.0.0
+ * @license     MIT License (http://opensource.org/licenses/MIT)
+ * @autor       Shekhar Suman
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Richerindex_Testimonial::richerindex" title="RicherIndex" module="Richerindex_Testimonial" sortOrder="20" resource="Richerindex_Testimonial::config_testimonial"/>
+        <add id="Richerindex_Testimonial::testimonials" title="Testimonials" module="Richerindex_Testimonial" action="testimonials/testimonial/index" parent="Richerindex_Testimonial::richerindex" sortOrder="10" resource="Richerindex_Testimonial::config_testimonial"/>
+    </menu>
+</config>
