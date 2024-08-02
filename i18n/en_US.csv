@@ -1,0 +1,67 @@
+"Manage Testimonial","Manage Testimonial"
+"Add New Testimonial","Add New Testimonial"
+"Save Testimonial","Save Testimonial"
+"Save and Continue Edit","Save and Continue Edit"
+"Delete Testimonial","Delete Testimonial"
+"Edit Testimonial '%1'","Edit Testimonial '%1'"
+"New Testimonial","New Testimonial"
+"Testimonial Information","Testimonial Information"
+Name,Name
+Profile Pic,Profile Pic
+"Company Name","Company Name"
+Post,Post
+Message,Message
+Testimonial,Testimonial
+Rating,Rating
+"Store View","Store View"
+Position,Position
+Status,Status
+"Testimonial Status","Testimonial Status"
+"General Infomration","General Infomration"
+"Create New Testimonial","Create New Testimonial"
+"The testimonial has been deleted.","The testimonial has been deleted."
+"We can't find a testimonial to delete.","We can't find a testimonial to delete."
+"This testimonial no longer exists.","This testimonial no longer exists."
+"Edit Testimonial","Edit Testimonial"
+"Edit testimonial","Edit testimonial"
+Testimonials,Testimonials
+KiwiCommerce_Testimonials,KiwiCommerce_Testimonials
+"Manage Testimonials","Manage Testimonials"
+"A total of %1 record(s) have been deleted.","A total of %1 record(s) have been deleted."
+"A total of %1 record(s) have been disabled.","A total of %1 record(s) have been disabled."
+"A total of %1 record(s) have been enabled.","A total of %1 record(s) have been enabled."
+"You saved this Testimonial.","You saved this Testimonial."
+"Something went wrong while saving the testimonial.","Something went wrong while saving the testimonial."
+"Please check reCaptcha and try again.","Please check reCaptcha and try again."
+"Thank for your testimonial.","Thank for your testimonial."
+"Something went wrong while saving your testimonial.","Something went wrong while saving your testimonial."
+"Customer Testimonials","Customer Testimonials"
+"Button Link","Button Link"
+List,List
+Grid,Grid
+"Make sure that category content does not reference the block itself.","Make sure that category content does not reference the block itself."
+Enabled,Enabled
+Disabled,Disabled
+"Preview","Preview"
+"All Store Views","All Store Views"
+"Image Preview","Image Preview"
+Edit,Edit
+"Submit Your Testimonial","Submit Your Testimonial"
+Company,Company
+Submit,Submit
+Reset,Reset
+"Read More","Read More"
+"Submit your testimonial","Submit your testimonial"
+"No testimonials found.","No testimonials found."
+"General Settings","General Settings"
+Enable,Enable
+"Date Format","Date Format"
+"Testimonial Form","Testimonial Form"
+"Display Type","Display Type"
+"Button Text","Button Text"
+Delete,Delete
+"Delete items","Delete items"
+"Are you sure you wan't to delete selected items?","Are you sure you wan't to delete selected items?"
+Disable,Disable
+Testimonial ID,Testimonial ID
+ID,ID
