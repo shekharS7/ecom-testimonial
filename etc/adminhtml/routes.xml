@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Shekhar Suman, 2024. All rights reserved.
+ * See COPYING.txt for license details.
+ * 
+ * @package     RicherIndex_Testimonial
+ * @version     1.0.0
+ * @license     MIT License (http://opensource.org/licenses/MIT)
+ * @autor       Shekhar Suman
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="testimonials" frontName="testimonials">
+            <module name="Richerindex_Testimonial"/>
+        </route>
+    </router>
+</config>
