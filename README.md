@@ -11,11 +11,8 @@
  - Export Testimonial CSV by running `php bin/magento testimonial:export:csv`
 
 
-
-
 ## Configuration
    
-
 
 ## Specifications
     RicherIndex-> Testimonial
@@ -43,9 +40,6 @@ phpcodesniffer test and some unit tests due to issues such as "Config file allur
     Magento Version :  "2.4.6-p3"
 	Php Version: 8.1.26
 	
-
-## Task having Magor issues that need improvement 
-1. Profile pic uploader is missing in form page. (Due to time constraints not able to complete)
 
 ## Screenshot
     Images include inside module folder(Report)
