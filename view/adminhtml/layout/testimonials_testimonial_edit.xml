@@ -15,8 +15,8 @@
     <body>
         <referenceContainer name="content">
             <!-- Ui form component -->
-			<!-- <uiComponent name="testimonial_form"/>-->
-			<block class="RicherIndex\Testimonial\Block\Adminhtml\Testimonial\Edit" name="richerindex_testimonial_edit"/>
+			<uiComponent name="testimonial_form"/>
+			<!-- <block class="RicherIndex\Testimonial\Block\Adminhtml\Testimonial\Edit" name="richerindex_testimonial_edit"/> -->
         </referenceContainer>
     </body>
 </page>
